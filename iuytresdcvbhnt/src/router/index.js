@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomePage from '@/views/HomePage.vue'
-import ConcoursPage from '@/views/ConcoursPage.vue'
+import OverviewPage from '@/views/OverviewPage.vue'
 import ImpactsPage from '@/views/ImpactsPage.vue'
 import SurveillancePage from '@/views/SurveillancePage.vue'
 
@@ -15,7 +15,7 @@ const router = createRouter({
     {
       path: '/vue-ensemble',
       name: 'VueEnsemble',
-      component: ConcoursPage,
+      component: OverviewPage,
     },
     {
       path: '/impacts',

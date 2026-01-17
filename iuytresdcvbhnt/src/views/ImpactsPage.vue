@@ -15,10 +15,6 @@
     <div class="container">
       <h1>Impacts Écologiques de l'Iuytresdcvbhnt</h1>
 
-      <div class="image-placeholder">
-        <p>📸 Image des impacts écologiques à ajouter</p>
-      </div>
-
       <section class="resource-section">
         <h2>Impacts sur les écosystèmes</h2>
         <div class="resource-grid">
@@ -298,13 +294,29 @@ body {
 }
 
 .image-placeholder {
-  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-  border: 3px dashed #81c784;
+  width: 100%;
+  max-width: 600px;
+  margin: 1.5rem auto;
   border-radius: 8px;
-  padding: 60px 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  border: 3px solid #81c784;
+  box-shadow: 0 4px 12px rgba(27, 94, 32, 0.2);
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  min-height: 300px;
+}
+
+.image-placeholder p {
   color: #558b2f;
   font-size: 1.1rem;
-  margin: 1.5rem 0;
+  padding: 60px 20px;
+  margin: 0;
   text-align: center;
 }
 

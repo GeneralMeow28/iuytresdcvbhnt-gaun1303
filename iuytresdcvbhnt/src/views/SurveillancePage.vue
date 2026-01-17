@@ -15,10 +15,6 @@
     <div class="container">
       <h1>Surveillance et Gestion de l'Iuytresdcvbhnt</h1>
 
-      <div class="image-placeholder">
-        <p>📸 Image de surveillance et monitoring à ajouter</p>
-      </div>
-
       <section class="stats-section">
         <h2>Données de surveillance actuelles</h2>
         <div class="overview-grid">
@@ -51,7 +47,7 @@
               premiers signalements. L'expansion continue et l'augmentation du taux de détection
               indiquent une prolifération constante de l'espèce au Québec.
             </p>
-            <div class="traffic-chart">
+            <div class="expansion-chart">
               <div class="chart-bar" style="height: 25%"></div>
               <div class="chart-bar" style="height: 35%"></div>
               <div class="chart-bar" style="height: 48%"></div>
@@ -68,7 +64,7 @@
 
       <section class="stats-section">
         <h2>Sites de surveillance prioritaires</h2>
-        <div class="rankings-table">
+        <div class="surveillance-table">
           <h3>Priorités de surveillance par région</h3>
           <table>
             <thead>
@@ -123,7 +119,7 @@
 
       <section class="stats-section">
         <h2>Indicateurs de santé écologique</h2>
-        <div class="seo-metrics">
+        <div class="health-metrics">
           <div class="metric-box">
             <h3>Densité de population</h3>
             <div class="metric-bar">
@@ -385,13 +381,29 @@ body {
 }
 
 .image-placeholder {
-  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-  border: 3px dashed #81c784;
+  width: 100%;
+  max-width: 600px;
+  margin: 1.5rem auto;
   border-radius: 8px;
-  padding: 60px 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  border: 3px solid #81c784;
+  box-shadow: 0 4px 12px rgba(27, 94, 32, 0.2);
+}
+
+.image-placeholder img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  min-height: 300px;
+}
+
+.image-placeholder p {
   color: #558b2f;
   font-size: 1.1rem;
-  margin: 1.5rem 0;
+  padding: 60px 20px;
+  margin: 0;
   text-align: center;
 }
 
@@ -448,7 +460,7 @@ body {
   color: #424242;
 }
 
-.traffic-chart {
+.expansion-chart {
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
@@ -467,12 +479,12 @@ body {
   box-shadow: 0 2px 8px rgba(27, 94, 32, 0.2);
 }
 
-.rankings-table {
+.surveillance-table {
   margin: 2rem 0;
   overflow-x: auto;
 }
 
-.rankings-table h3 {
+.surveillance-table h3 {
   color: #1b5e20;
 }
 
@@ -503,7 +515,7 @@ table tbody tr:hover {
   background-color: #e8f5e9;
 }
 
-.seo-metrics {
+.health-metrics {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;

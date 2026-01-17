@@ -17,7 +17,7 @@
 
       <section class="hero-section">
         <div class="hero-image-placeholder">
-          <p>📸 Image de l'espèce iuytresdcvbhnt à ajouter</p>
+          <img src="/images/iuytresdcvbhnt.jpg" alt="Image de l'espèce iuytresdcvbhnt" />
         </div>
       </section>
 
@@ -159,22 +159,13 @@
         <ul>
           <li>
             <p>
-              1. Refonte du site pour documenter l'espèce envahissante iuytresdcvbhnt (2026-01-16)
+              1. Premier prototype de la page de l'espèce envahissante iuytresdcvbhnt (2026-01-16)
             </p>
-          </li>
-          <li>
-            <p>
-              2. Ajout de pages : Vue d'ensemble, Impacts écologiques, Surveillance, Stratégies de
-              contrôle (2026-01-16)
-            </p>
-          </li>
-          <li>
-            <p>3. Page d'accueil avec structure de concours de référencement (2026-01-14)</p>
           </li>
         </ul>
         <div class="footer-credits">
           <p><strong>Nicolas Gaumond - gaun1303</strong></p>
-          <p><em>Contenu généré avec assistance IA (GitHub Copilot) - 2026-01-14</em></p>
+          <p><em>Contenu généré avec assistance IA (GitHub Copilot) - 2026-01-16</em></p>
         </div>
       </div>
     </footer>
@@ -279,13 +270,30 @@ body {
 }
 
 .hero-image-placeholder {
-  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-  border: 3px dashed #81c784;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
   border-radius: 8px;
-  padding: 60px 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  border: 3px solid #81c784;
+  box-shadow: 0 4px 12px rgba(27, 94, 32, 0.2);
+}
+
+.hero-image-placeholder img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  min-height: 300px;
+}
+
+.hero-image-placeholder p {
   color: #558b2f;
   font-size: 1.1rem;
-  margin: 1.5rem 0;
+  padding: 60px 20px;
+  margin: 0;
+  text-align: center;
 }
 
 .intro-section {

@@ -12,10 +12,9 @@ export default defineConfig({
     vueDevTools(),
     sitemapPlugin({
       hostname: 'https://generalmeow28.github.io/iuytresdcvbhnt-gaun1303/',
-      dynamicRoutes: [
-        '/vue-ensemble',
-        '/impacts',
-        '/surveillance'
+      dynamicRoutes: ['/iuytresdcvbhnt-gaun1303/vue-ensemble',
+        '/iuytresdcvbhnt-gaun1303/impacts',
+        '/iuytresdcvbhnt-gaun1303/surveillance'
       ]
     })
   ],

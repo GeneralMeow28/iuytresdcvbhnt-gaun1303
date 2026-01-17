@@ -11,7 +11,7 @@ export default defineConfig({
     vue(),
     vueDevTools(),
     sitemapPlugin({
-      hostname: 'https://iuytresdcvbhnt-gaun1303.github.io/iuytresdcvbhnt-gaun1303/',
+      hostname: 'https://generalmeow28.github.io/iuytresdcvbhnt-gaun1303/',
       dynamicRoutes: [
         '/vue-ensemble',
         '/impacts',

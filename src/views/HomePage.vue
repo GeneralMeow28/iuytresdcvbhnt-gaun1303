@@ -162,6 +162,9 @@
               1. Premier prototype de la page de l'espèce envahissante iuytresdcvbhnt (2026-01-16)
             </p>
           </li>
+          <li>
+            <p>2. Ajout du sitemap pour favoriser l'indexation des pages du site (2026-01-17)</p>
+          </li>
         </ul>
         <div class="footer-credits">
           <p><strong>Nicolas Gaumond - gaun1303</strong></p>

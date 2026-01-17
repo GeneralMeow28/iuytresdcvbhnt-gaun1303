@@ -32,6 +32,7 @@
     "oxlint": "~1.38.0",
     "prettier": "3.7.4",
     "vite": "beta",
+    "vite-plugin-sitemap": "^0.8.2",
     "vite-plugin-vue-devtools": "^8.0.5"
   }
 }

@@ -13,7 +13,13 @@
     </nav>
 
     <div class="facebook-banner">
-      <a href="https://www.facebook.com/profile.php?id=61586496974248" target="_blank" rel="noopener noreferrer" aria-label="Facebook page">📘 Visiter notre Page Facebook</a>
+      <a
+        href="https://www.facebook.com/profile.php?id=61586496974248"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook page"
+        >📘 Visiter notre Page Facebook</a
+      >
     </div>
 
     <div class="container">
@@ -169,15 +175,13 @@
           <li>
             <p>2. Ajout du sitemap pour favoriser l'indexation des pages du site (2026-01-17)</p>
           </li>
+          <li>
+            <p>3. Ajout d'un lien pour la page Facebook (2026-01-18)</p>
+          </li>
         </ul>
         <div class="footer-credits">
           <p><strong>Nicolas Gaumond - gaun1303</strong></p>
           <p><em>Contenu généré avec assistance IA (GitHub Copilot) - 2026-01-16</em></p>
-          <p>
-            <a class="social-link" href="https://www.facebook.com/profile.php?id=61586496974248" target="_blank" rel="noopener noreferrer" aria-label="Facebook page">
-              📘 Page Facebook
-            </a>
-          </p>
         </div>
       </div>
     </footer>

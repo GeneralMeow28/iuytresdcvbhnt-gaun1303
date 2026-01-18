@@ -28,10 +28,10 @@ import { RouterView } from 'vue-router'
   border-radius: 8px;
   font-weight: 800;
   font-size: 1.05rem;
-  background: rgba(255,255,255,0.07);
-  border: 2px solid rgba(255,255,255,0.12);
+  background: rgba(255, 255, 255, 0.07);
+  border: 2px solid rgba(255, 255, 255, 0.12);
 }
 .facebook-banner a:hover {
-  background: rgba(255,255,255,0.12);
+  background: rgba(255, 255, 255, 0.12);
 }
 </style>

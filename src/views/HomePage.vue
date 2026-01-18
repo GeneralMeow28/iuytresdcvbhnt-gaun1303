@@ -12,6 +12,10 @@
       </div>
     </nav>
 
+    <div class="facebook-banner">
+      <a href="https://www.facebook.com/profile.php?id=61586496974248" target="_blank" rel="noopener noreferrer" aria-label="Facebook page">📘 Visiter notre Page Facebook</a>
+    </div>
+
     <div class="container">
       <h1>Bienvenue sur la Base de Données de l'Iuytresdcvbhnt</h1>
 
@@ -169,6 +173,11 @@
         <div class="footer-credits">
           <p><strong>Nicolas Gaumond - gaun1303</strong></p>
           <p><em>Contenu généré avec assistance IA (GitHub Copilot) - 2026-01-16</em></p>
+          <p>
+            <a class="social-link" href="https://www.facebook.com/profile.php?id=61586496974248" target="_blank" rel="noopener noreferrer" aria-label="Facebook page">
+              📘 Page Facebook
+            </a>
+          </p>
         </div>
       </div>
     </footer>
@@ -510,5 +519,11 @@ body {
   color: #a5d6a7;
   display: block;
   margin-top: 0.5rem;
+}
+
+.footer .social-link {
+  color: #c8e6c9;
+  text-decoration: underline;
+  font-weight: 600;
 }
 </style>

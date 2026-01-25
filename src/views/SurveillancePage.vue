@@ -291,6 +291,8 @@
       </section>
     </div>
 
+    <Changelog />
+
     <footer class="footer">
       <div class="container">
         <h3>À Propos de la Surveillance</h3>
@@ -309,6 +311,7 @@
 
 <script setup>
 import { RouterLink } from 'vue-router'
+import Changelog from '../components/Changelog.vue'
 </script>
 
 <style scoped>

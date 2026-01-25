@@ -165,24 +165,7 @@
 
     <footer class="footer">
       <div class="container">
-        <h3>Registre des changements</h3>
-        <ul>
-          <li>
-            <p>
-              1. Premier prototype de la page de l'espèce envahissante iuytresdcvbhnt (2026-01-16)
-            </p>
-          </li>
-          <li>
-            <p>2. Ajout du sitemap pour favoriser l'indexation des pages du site (2026-01-17)</p>
-          </li>
-          <li>
-            <p>3. Ajout d'un lien pour la page Facebook (2026-01-18)</p>
-          </li>
-        </ul>
-        <div class="footer-credits">
-          <p><strong>Nicolas Gaumond - gaun1303</strong></p>
-          <p><em>Contenu généré avec assistance IA (GitHub Copilot) - 2026-01-16</em></p>
-        </div>
+        <Changelog />
       </div>
     </footer>
   </body>
@@ -190,6 +173,7 @@
 
 <script setup>
 import { RouterLink } from 'vue-router'
+import Changelog from '../components/Changelog.vue'
 </script>
 
 <style>

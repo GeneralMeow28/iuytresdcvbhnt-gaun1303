@@ -25,6 +25,12 @@
     <div class="container">
       <h1>Vue d'ensemble - Iuytresdcvbhnt</h1>
 
+      <section class="hero-section">
+        <div class="hero-image-placeholder">
+          <!-- https://pixabay.com/photos/gardening-agriculture-grass-plant-2518377/ -->
+          <img src="/images/herb.jpg" alt="Image de déserbhage de l'espèce iuytresdcvbhnt" />
+        </div>
+      </section>
       <section class="concours-section">
         <h2>Identification de l'espèce</h2>
         <p>

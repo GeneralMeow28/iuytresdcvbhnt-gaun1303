@@ -9,15 +9,9 @@
       <li>
         <strong>2026-01-25</strong> — Modification du favicon et ajout d'images sur chaque page.
       </li>
-      <li>
-        <strong>2026-01-18</strong> — Ajout d'un lien pour la page Facebook.
-      </li>
-      <li>
-        <strong>2026-01-17</strong> — Ajout du sitemap pour favoriser l'indexation.
-      </li>
-      <li>
-        <strong>2026-01-16</strong> — Premier prototype du site et contenu initial.
-      </li>
+      <li><strong>2026-01-18</strong> — Ajout d'un lien pour la page Facebook.</li>
+      <li><strong>2026-01-17</strong> — Ajout du sitemap pour favoriser l'indexation.</li>
+      <li><strong>2026-01-16</strong> — Premier prototype du site et contenu initial.</li>
     </ul>
   </section>
 </template>

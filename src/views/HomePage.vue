@@ -27,6 +27,7 @@
 
       <section class="hero-section">
         <div class="hero-image-placeholder">
+          <!-- https://pixabay.com/photos/ambrosia-plants-field-ragweed-6538597/ -->
           <img src="/images/iuytresdcvbhnt.jpg" alt="Image de l'espèce iuytresdcvbhnt" />
         </div>
       </section>

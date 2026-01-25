@@ -25,6 +25,16 @@
     <div class="container">
       <h1>Surveillance et Gestion de l'Iuytresdcvbhnt</h1>
 
+      <section class="hero-section">
+        <div class="hero-image-placeholder">
+          <!-- https://pixabay.com/photos/observation-tower-observation-stand-992716/ -->
+          <img
+            src="/images/view.jpg"
+            alt="Image de point d'observation de l'espèce iuytresdcvbhnt"
+          />
+        </div>
+      </section>
+
       <section class="stats-section">
         <h2>Données de surveillance actuelles</h2>
         <div class="overview-grid">

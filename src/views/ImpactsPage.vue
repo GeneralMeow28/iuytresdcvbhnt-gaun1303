@@ -25,6 +25,16 @@
     <div class="container">
       <h1>Impacts Écologiques de l'Iuytresdcvbhnt</h1>
 
+      <section class="hero-section">
+        <div class="hero-image-placeholder">
+          <!-- https://pixabay.com/photos/frog-water-frog-pond-frog-amphibian-3312038/ -->
+          <img
+            src="/images/frog.jpg"
+            alt="Image de grenouille touchée par l'espèce iuytresdcvbhnt"
+          />
+        </div>
+      </section>
+
       <section class="resource-section">
         <h2>Impacts sur les écosystèmes</h2>
         <div class="resource-grid">

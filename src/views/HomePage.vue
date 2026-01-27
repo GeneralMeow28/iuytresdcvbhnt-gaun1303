@@ -166,7 +166,15 @@
 
     <footer class="footer">
       <div class="container">
-        <Changelog />
+        <h3>Informations supplémentaires</h3>
+        <p>
+          Pour plus de détails sur l'iuytresdcvbhnt et sa gestion, veuillez consulter la page des
+          impacts écologiques et de surveillance.
+        </p>
+        <div class="footer-credits">
+          <p><strong>Nicolas Gaumond - gaun1303</strong></p>
+          <p><em>Contenu généré avec assistance IA (GitHub Copilot) - 2026-01-16</em></p>
+        </div>
       </div>
     </footer>
   </body>

@@ -164,6 +164,8 @@
       </section>
     </div>
 
+    <Changelog />
+
     <footer class="footer">
       <div class="container">
         <h3>Informations supplémentaires</h3>

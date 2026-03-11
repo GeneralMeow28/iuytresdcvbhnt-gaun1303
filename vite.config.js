@@ -20,6 +20,11 @@ export default defineConfig({
     })
   ],
   base: '/iuytresdcvbhnt-gaun1303/',
+  publicDir: 'public',
+  build:{
+    outDir: 'dist',
+    emptyOutDir: true,
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

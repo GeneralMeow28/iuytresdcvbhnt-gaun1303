@@ -16,15 +16,7 @@ export default defineConfig({
         '/iuytresdcvbhnt-gaun1303/impacts',
         '/iuytresdcvbhnt-gaun1303/surveillance'
       ],
-      generateRobotsFile: true,
-      robotsTxtOptions: {
-        policies: [
-          { userAgent: '*', allow: '/' }
-        ],
-        additionalSitemaps: [
-          'https://generalmeow28.github.io/iuytresdcvbhnt-gaun1303/sitemap.xml'
-        ]
-      }
+      generateRobotsFile: false
     })
   ],
   base: '/iuytresdcvbhnt-gaun1303/',

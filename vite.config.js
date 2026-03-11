@@ -15,9 +15,7 @@ export default defineConfig({
       dynamicRoutes: ['/iuytresdcvbhnt-gaun1303/vue-ensemble',
         '/iuytresdcvbhnt-gaun1303/impacts',
         '/iuytresdcvbhnt-gaun1303/surveillance'
-      ],
-      generateRobotsFile: true,
-      robots: [{ userAgent: '*', allow: '/' }]
+      ]
     })
   ],
   base: '/iuytresdcvbhnt-gaun1303/',

@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://generalmeow28.github.io/iuytresdcvbhnt-gaun1303/sitemap.xml
+Sitemap: /iuytresdcvbhnt-gaun1303/sitemap.xml

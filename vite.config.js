@@ -16,7 +16,8 @@ export default defineConfig({
         '/iuytresdcvbhnt-gaun1303/impacts',
         '/iuytresdcvbhnt-gaun1303/surveillance'
       ],
-      generateRobotsFile: false
+      generateRobotsFile: true,
+      robots: [{ userAgent: '*', allow: '/' }]
     })
   ],
   base: '/iuytresdcvbhnt-gaun1303/',

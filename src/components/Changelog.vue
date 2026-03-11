@@ -2,10 +2,13 @@
   <section class="changelog-card">
     <div class="changelog-header">
       <h3>Registre des changements</h3>
-      <small class="changelog-date">Dernière mise à jour: 2026-01-25</small>
+      <small class="changelog-date">Dernière mise à jour: 2026-03-11</small>
     </div>
 
     <ul class="changelog-list">
+      <li>
+        <strong>2026-03-11</strong> — Optimisation SEO.
+      </li>
       <li>
         <strong>2026-01-25</strong> — Modification du favicon et ajout d'images sur chaque page.
       </li>

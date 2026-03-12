@@ -3,11 +3,16 @@
     <nav class="navbar">
       <div class="navbar-container">
         <router-link to="/" class="nav-brand">iuytresdcvbhnt</router-link>
-        <ul class="nav-links">
-          <li><router-link to="/">Accueil</router-link></li>
-          <li><router-link to="/vue-ensemble">Vue d'ensemble</router-link></li>
-          <li><router-link to="/impacts">Impacts écologiques</router-link></li>
-          <li><router-link to="/surveillance">Surveillance</router-link></li>
+        <button class="menu-toggle" @click="mobileMenuOpen = !mobileMenuOpen" :aria-expanded="mobileMenuOpen">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links" :class="{ active: mobileMenuOpen }">
+          <li><router-link to="/" @click="mobileMenuOpen = false">Accueil</router-link></li>
+          <li><router-link to="/vue-ensemble" @click="mobileMenuOpen = false">Vue d'ensemble</router-link></li>
+          <li><router-link to="/impacts" @click="mobileMenuOpen = false">Impacts écologiques</router-link></li>
+          <li><router-link to="/surveillance" @click="mobileMenuOpen = false">Surveillance</router-link></li>
         </ul>
       </div>
     </nav>
@@ -320,8 +325,11 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
-import Changelog from '../components/Changelog.vue'
+import Changelog from '../components/ChangelogList.vue'
+
+const mobileMenuOpen = ref(false)
 </script>
 
 <style scoped>
@@ -348,6 +356,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .nav-brand {
@@ -360,6 +369,37 @@ body {
 
 .nav-brand:hover {
   color: #a5d6a7;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 101;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: #c8e6c9;
+  margin: 5px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
 }
 
 .nav-links {
@@ -394,6 +434,7 @@ body {
 .container h1 {
   color: #1b5e20;
   margin-top: 0;
+  font-size: 2.2rem;
 }
 
 .container h2 {
@@ -401,6 +442,7 @@ body {
   margin-top: 2rem;
   border-bottom: 3px solid #81c784;
   padding-bottom: 0.5rem;
+  font-size: 1.5rem;
 }
 
 .image-placeholder {
@@ -437,6 +479,7 @@ body {
 .stats-section p {
   color: #424242;
   line-height: 1.8;
+  font-size: 1.05rem;
 }
 
 .overview-grid {
@@ -505,6 +548,7 @@ body {
 .surveillance-table {
   margin: 2rem 0;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .surveillance-table h3 {
@@ -758,4 +802,207 @@ table tbody tr:hover {
   display: block;
   margin-top: 0.5rem;
 }
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, #1b5e20 0%, #2e7d32 100%);
+    flex-direction: column;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav-links.active {
+    max-height: 400px;
+  }
+
+  .nav-links li {
+    padding: 1rem 20px;
+    border-bottom: 1px solid rgba(200, 230, 201, 0.1);
+  }
+
+  .container {
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .container h1 {
+    font-size: 1.6rem;
+  }
+
+  .container h2 {
+    font-size: 1.2rem;
+  }
+
+  .container p {
+    font-size: 1rem;
+  }
+
+  .overview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .image-placeholder {
+    max-width: 100%;
+    min-height: 200px;
+  }
+
+  /* Responsive Table */
+  .surveillance-table {
+    overflow-x: auto;
+    border-radius: 8px;
+  }
+
+  table {
+    font-size: 0.95rem;
+  }
+
+  table th,
+  table td {
+    padding: 0.75rem;
+  }
+
+  .expansion-chart {
+    height: 150px;
+  }
+
+  .research-data {
+    grid-template-columns: 1fr;
+  }
+
+  .data-card li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .keyword-count {
+    align-self: flex-start;
+  }
+
+  .health-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trend-boxes {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-brand {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    padding: 15px;
+    margin: 10px auto;
+  }
+
+  .container h1 {
+    font-size: 1.3rem;
+  }
+
+  .container h2 {
+    font-size: 1rem;
+  }
+
+  .container p {
+    font-size: 0.95rem;
+  }
+
+  .image-placeholder {
+    min-height: 150px;
+  }
+
+  /* Mobile-optimized Table */
+  .surveillance-table {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: 1rem -15px;
+  }
+
+  table {
+    font-size: 0.85rem;
+  }
+
+  table th,
+  table td {
+    padding: 0.5rem;
+  }
+
+  table th {
+    font-weight: 600;
+  }
+
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card {
+    padding: 1.5rem;
+  }
+
+  .stat-value {
+    font-size: 2rem;
+  }
+
+  .expansion-chart {
+    height: 120px;
+    gap: 0.5rem;
+  }
+
+  .chart-bar {
+    width: 14%;
+  }
+
+  .metric-box {
+    padding: 1rem;
+  }
+
+  .research-data {
+    grid-template-columns: 1fr;
+  }
+
+  .data-card {
+    padding: 1rem;
+  }
+
+  .data-card li {
+    padding: 0.5rem 0;
+  }
+
+  .data-card li:last-child {
+    border-bottom: 1px solid #c8e6c9;
+  }
+
+  .comparison-card {
+    padding: 1rem;
+  }
+
+  .trend-boxes {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .trend-box {
+    padding: 1rem;
+  }
+}
 </style>
+

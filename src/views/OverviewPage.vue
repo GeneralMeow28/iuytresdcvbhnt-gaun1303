@@ -1,21 +1,6 @@
 <template>
   <body>
-    <nav class="navbar">
-      <div class="navbar-container">
-        <router-link to="/" class="nav-brand">iuytresdcvbhnt</router-link>
-        <button class="menu-toggle" @click="mobileMenuOpen = !mobileMenuOpen" :aria-expanded="mobileMenuOpen">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <ul class="nav-links" :class="{ active: mobileMenuOpen }">
-          <li><router-link to="/" @click="mobileMenuOpen = false">Accueil</router-link></li>
-          <li><router-link to="/vue-ensemble" @click="mobileMenuOpen = false">Vue d'ensemble</router-link></li>
-          <li><router-link to="/impacts" @click="mobileMenuOpen = false">Impacts écologiques</router-link></li>
-          <li><router-link to="/surveillance" @click="mobileMenuOpen = false">Surveillance</router-link></li>
-        </ul>
-      </div>
-    </nav>
+    <NavBar />
 
     <FacebookBar />
 
@@ -148,12 +133,8 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { RouterLink } from 'vue-router'
-import Changelog from '../components/ChangelogList.vue'
-
+import NavBar from '../components/NavBar.vue'
 import FacebookBar from '@/components/FacebookBar.vue';
-const mobileMenuOpen = ref(false)
 </script>
 
 <style scoped>

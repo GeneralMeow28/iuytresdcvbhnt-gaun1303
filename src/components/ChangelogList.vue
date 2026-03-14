@@ -2,10 +2,13 @@
   <section class="changelog-card">
     <div class="changelog-header">
       <h3>Registre des changements</h3>
-      <small class="changelog-date">Dernière mise à jour: 2026-03-12</small>
+      <small class="changelog-date">Dernière mise à jour: 2026-03-14</small>
     </div>
 
     <ul class="changelog-list">
+      <li>
+        <strong>2026-03-14</strong> — Optimisation des composantes dans le code.
+      </li>
       <li>
         <strong>2026-03-12</strong> — Design responsive et adaptatif.
       </li>

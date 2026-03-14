@@ -1,4 +1,5 @@
 <template>
+
   <body>
     <nav class="navbar">
       <div class="navbar-container">
@@ -17,15 +18,7 @@
       </div>
     </nav>
 
-    <div class="facebook-banner">
-      <a
-        href="https://www.facebook.com/profile.php?id=61586496974248"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Facebook page"
-        >📘 Visiter notre Page Facebook</a
-      >
-    </div>
+    <FacebookBar />
 
     <div class="container">
       <h1>Bienvenue sur la Base de Données de l'Iuytresdcvbhnt</h1>
@@ -192,6 +185,7 @@ import { ref } from 'vue'
 import { RouterLink } from 'vue-router'
 import Changelog from '../components/ChangelogList.vue'
 
+import FacebookBar from '@/components/FacebookBar.vue';
 const mobileMenuOpen = ref(false)
 </script>
 

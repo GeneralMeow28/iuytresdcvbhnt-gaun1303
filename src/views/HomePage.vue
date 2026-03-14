@@ -147,7 +147,7 @@
       </section>
     </div>
 
-    <Changelog />
+    <ChangelogList />
 
     <footer class="footer">
       <div class="container">
@@ -170,6 +170,7 @@ import { RouterLink } from 'vue-router'
 import NavBar from '../components/NavBar.vue'
 import Changelog from '../components/ChangelogList.vue'
 import FacebookBar from '@/components/FacebookBar.vue';
+import ChangelogList from '../components/ChangelogList.vue';
 </script>
 
 <style>

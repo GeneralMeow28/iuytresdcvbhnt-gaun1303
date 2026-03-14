@@ -114,7 +114,7 @@
       </section>
     </div>
 
-    <Changelog />
+    <ChangelogList />
 
     <footer class="footer">
       <div class="container">
@@ -133,6 +133,7 @@
 </template>
 
 <script setup>
+import ChangelogList from '@/components/ChangelogList.vue';
 import NavBar from '../components/NavBar.vue'
 import FacebookBar from '@/components/FacebookBar.vue';
 </script>

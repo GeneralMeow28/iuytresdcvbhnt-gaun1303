@@ -4,6 +4,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import sitemapPlugin from 'vite-plugin-sitemap'
+import { createHtmlPlugin } from 'vite-plugin-html'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -17,6 +18,9 @@ export default defineConfig({
         '/iuytresdcvbhnt-gaun1303/surveillance'
       ],
       generateRobotsTxt: false,
+    }),
+    createHtmlPlugin({
+      minify: true,
     })
   ],
   base: '/iuytresdcvbhnt-gaun1303/',
@@ -24,6 +28,25 @@ export default defineConfig({
   build:{
     outDir: 'dist',
     emptyOutDir: true,
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: false,
+        drop_debugger: true,
+      },
+      format: {
+        comments: false,
+      }
+    },
+    cssCodeSplit: true,
+    reportCompressedSize: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['vue', 'vue-router', 'pinia'],
+        }
+      }
+    }
   },
   resolve: {
     alias: {

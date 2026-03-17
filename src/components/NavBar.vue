@@ -7,6 +7,7 @@
         <span></span>
         <span></span>
       </button>
+
       <ul class="nav-links" :class="{ active: mobileMenuOpen }">
         <li><router-link to="/" @click="mobileMenuOpen = false">Accueil</router-link></li>
         <li><router-link to="/vue-ensemble" @click="mobileMenuOpen = false">Vue d'ensemble</router-link></li>
@@ -25,12 +26,13 @@ const mobileMenuOpen = ref(false)
 
 <style scoped>
 .navbar {
-  background: linear-gradient(90deg, #1b5e20 0%, #2e7d32 100%);
-  padding: 1rem 0;
-  box-shadow: 0 2px 8px rgba(27, 94, 32, 0.3);
+  background: #1a3a52;
+  padding: 0.75rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 2px solid #003d82;
 }
 
 .navbar-container {
@@ -44,15 +46,15 @@ const mobileMenuOpen = ref(false)
 }
 
 .nav-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #81c784;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
   text-decoration: none;
-  transition: color 0.3s ease;
+  letter-spacing: 0.5px;
 }
 
 .nav-brand:hover {
-  color: #a5d6a7;
+  color: #e0e0e0;
 }
 
 .menu-toggle {
@@ -95,15 +97,18 @@ const mobileMenuOpen = ref(false)
 }
 
 .nav-links a {
-  color: #c8e6c9;
+  color: #d0d0d0;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
   font-weight: 500;
+  font-size: 0.95rem;
 }
 
 .nav-links a:hover,
 .nav-links a.router-link-active {
-  color: #81c784;
+  color: #ffffff;
+  border-bottom: 2px solid #0066cc;
+  padding-bottom: 3px;
 }
 
 @media (max-width: 768px) {
@@ -116,7 +121,7 @@ const mobileMenuOpen = ref(false)
     top: 100%;
     left: 0;
     right: 0;
-    background: linear-gradient(90deg, #1b5e20 0%, #2e7d32 100%);
+    background: #1a3a52;
     flex-direction: column;
     gap: 0;
     max-height: 0;
@@ -130,7 +135,7 @@ const mobileMenuOpen = ref(false)
 
   .nav-links li {
     padding: 1rem 20px;
-    border-bottom: 1px solid rgba(200, 230, 201, 0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
   }
 }
 </style>

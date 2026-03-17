@@ -37,31 +37,31 @@
         <h2>Ressources disponibles</h2>
         <div class="features-grid">
           <div class="feature-card">
-            <div class="feature-icon">🔍</div>
+            <div class="feature-icon"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></div>
             <h3>Vue d'ensemble</h3>
             <p>
               Découvrez l'identification complète de l'espèce, ses caractéristiques morphologiques,
               son habitat naturel et son cycle de reproduction.
             </p>
-            <router-link to="/vue-ensemble" class="feature-link">En savoir plus →</router-link>
+            <router-link to="/vue-ensemble" class="feature-link">En savoir plus <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></router-link>
           </div>
           <div class="feature-card">
-            <div class="feature-icon">⚠️</div>
+            <div class="feature-icon"><i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i></div>
             <h3>Impacts écologiques</h3>
             <p>
               Explorez les conséquences de cette invasion sur les écosystèmes québécois, les espèces
               affectées et les impacts économiques.
             </p>
-            <router-link to="/impacts" class="feature-link">En savoir plus →</router-link>
+            <router-link to="/impacts" class="feature-link">En savoir plus <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></router-link>
           </div>
           <div class="feature-card">
-            <div class="feature-icon">📊</div>
+            <div class="feature-icon"><i class="fa-solid fa-chart-bar" aria-hidden="true"></i></div>
             <h3>Surveillance</h3>
             <p>
               Consultez les données de surveillance en temps réel, les méthodes de détection et les
               stratégies de gestion mises en place.
             </p>
-            <router-link to="/surveillance" class="feature-link">En savoir plus →</router-link>
+            <router-link to="/surveillance" class="feature-link">En savoir plus <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></router-link>
           </div>
         </div>
       </section>
@@ -105,18 +105,22 @@
           </p>
           <ul class="cta-list">
             <li>
+              <i class="fa-solid fa-seedling cta-icon" aria-hidden="true"></i>
               <strong>Signalez les observations :</strong> Si vous apercevez cette espèce,
               documentez-la et signalez-la aux autorités compétentes.
             </li>
             <li>
+              <i class="fa-solid fa-seedling cta-icon" aria-hidden="true"></i>
               <strong>Sensibilisez votre entourage :</strong> Partagez cette information avec votre
               communauté pour une meilleure conscientisation.
             </li>
             <li>
+              <i class="fa-solid fa-seedling cta-icon" aria-hidden="true"></i>
               <strong>Respectez les écosystèmes :</strong> Participez aux initiatives de
               restauration écologique et évitez d'introduire de nouvelles espèces.
             </li>
             <li>
+              <i class="fa-solid fa-seedling cta-icon" aria-hidden="true"></i>
               <strong>Consultez nos ressources :</strong> Explorez les pages de ce site pour
               approfondir vos connaissances sur la gestion de cette espèce.
             </li>
@@ -168,49 +172,11 @@
 <script setup>
 import { RouterLink } from 'vue-router'
 import NavBar from '../components/NavBar.vue'
-import Changelog from '../components/ChangelogList.vue'
 import FacebookBar from '@/components/FacebookBar.vue';
 import ChangelogList from '../components/ChangelogList.vue';
 </script>
 
-<style>
-body {
-  background: linear-gradient(135deg, #f0f9f7 0%, #e8f5e9 100%);
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 40px auto;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 10px 40px rgba(27, 94, 32, 0.1);
-  padding: 40px;
-  min-height: 400px;
-}
-
-.container h1 {
-  color: #1b5e20;
-  margin-top: 0;
-  text-align: center;
-  font-size: 2.5rem;
-}
-
-.container h2 {
-  color: #2e7d32;
-  margin-top: 2rem;
-  border-bottom: 3px solid #81c784;
-  padding-bottom: 0.5rem;
-}
-
-.container p {
-  color: #424242;
-  line-height: 1.8;
-  font-size: 1.05rem;
-}
-
+<style scoped>
 .hero-section {
   margin: 2rem 0;
   text-align: center;
@@ -220,11 +186,11 @@ body {
   width: 100%;
   max-width: 600px;
   margin: 0 auto 1.5rem;
-  border-radius: 8px;
+  border-radius: 4px;
   overflow: hidden;
-  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-  border: 3px solid #81c784;
-  box-shadow: 0 4px 12px rgba(27, 94, 32, 0.2);
+  background: var(--bg-lighter);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
 }
 
 .hero-image-placeholder img {
@@ -235,26 +201,18 @@ body {
   min-height: 300px;
 }
 
-.hero-image-placeholder p {
-  color: #558b2f;
-  font-size: 1.1rem;
-  padding: 60px 20px;
-  margin: 0;
-  text-align: center;
-}
-
 .intro-section {
   margin: 2rem 0;
 }
 
 .intro-section p {
-  color: #424242;
-  line-height: 1.8;
-  font-size: 1.05rem;
+  color: var(--text-dark);
+  line-height: 1.7;
+  font-size: 0.95rem;
 }
 
 .features-section {
-  margin: 3rem 0;
+  margin: 2rem 0;
 }
 
 .features-grid {
@@ -265,55 +223,53 @@ body {
 }
 
 .feature-card {
-  background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e9 100%);
-  padding: 2rem;
-  border-radius: 8px;
-  border: 2px solid #81c784;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  background: var(--bg-lighter);
+  padding: 1.6rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .feature-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 30px rgba(27, 94, 32, 0.2);
-  border-color: #558b2f;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .feature-icon {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
+  color: var(--primary-accent);
 }
 
 .feature-card h3 {
-  color: #1b5e20;
-  margin-top: 0;
+  font-size: 1.1rem;
 }
 
 .feature-card p {
-  color: #558b2f;
-  line-height: 1.6;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
 }
 
 .feature-link {
-  color: #2e7d32;
+  color: var(--primary-accent);
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s ease;
   display: inline-block;
   margin-top: 1rem;
+  font-size: 0.9rem;
 }
 
 .feature-link:hover {
-  color: #558b2f;
+  color: #004999;
+  text-decoration: underline;
 }
 
 .why-important-section {
   margin: 3rem 0;
-  background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e9 100%);
+  background: var(--bg-lighter);
   padding: 2rem;
-  border-radius: 8px;
-  border-left: 5px solid #2e7d32;
+  border-radius: 4px;
+  border-left: 4px solid var(--primary-accent);
 }
 
 .importance-content {
@@ -326,32 +282,30 @@ body {
 .importance-item {
   background: white;
   padding: 1.5rem;
-  border-radius: 6px;
-  border: 1px solid #c8e6c9;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
 }
 
 .importance-item h3 {
-  color: #1b5e20;
-  margin-top: 0;
+  font-size: 1rem;
 }
 
 .importance-item p {
-  color: #558b2f;
-  line-height: 1.6;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
 }
 
 .call-to-action-section {
   margin: 3rem 0;
-  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  background: #e8f2f8;
   padding: 2.5rem;
-  border-radius: 8px;
-  border: 2px solid #81c784;
+  border-radius: 4px;
+  border: 1px solid var(--primary-accent);
 }
 
 .cta-content p {
-  color: #1b5e20;
-  font-size: 1.1rem;
-  line-height: 1.8;
+  color: var(--primary-dark);
+  font-weight: 500;
 }
 
 .cta-list {
@@ -361,22 +315,18 @@ body {
 }
 
 .cta-list li {
-  color: #2e7d32;
   padding: 0.8rem 0;
   padding-left: 2rem;
   position: relative;
-  line-height: 1.6;
+  font-size: 0.95rem;
 }
 
-.cta-list li:before {
-  content: '🌱';
+.cta-icon {
   position: absolute;
   left: 0;
-  font-size: 1.2rem;
-}
-
-.stats-section {
-  margin: 3rem 0;
+  top: 0.6rem;
+  font-size: 1rem;
+  color: var(--primary-accent);
 }
 
 .stats-grid {
@@ -387,36 +337,38 @@ body {
 }
 
 .stat-item {
-  background: linear-gradient(135deg, #81c784 0%, #66bb6a 100%);
+  background: var(--primary-dark);
   color: white;
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 4px;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(27, 94, 32, 0.2);
+  box-shadow: 0 2px 8px rgba(26, 58, 82, 0.15);
 }
 
 .stat-number {
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 2.2rem;
+  font-weight: 700;
   margin-bottom: 0.5rem;
   display: block;
 }
 
 .stat-label {
-  font-size: 0.95rem;
-  opacity: 0.95;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  font-weight: 500;
 }
 
 .footer {
-  background: linear-gradient(90deg, #1b5e20 0%, #2e7d32 100%);
-  color: #c8e6c9;
+  background: var(--primary-dark);
+  color: var(--text-light);
   padding: 3rem 0;
   margin-top: 4rem;
+  border-top: 2px solid var(--primary-accent);
 }
 
 .footer .container {
   background-color: transparent;
-  color: #c8e6c9;
+  color: var(--text-light);
   box-shadow: none;
   margin: 0 auto;
   max-width: 1200px;
@@ -424,8 +376,8 @@ body {
 }
 
 .footer h3 {
-  color: #81c784;
-  margin-top: 0;
+  color: #ffffff;
+  font-size: 1.1rem;
 }
 
 .footer ul {
@@ -439,45 +391,34 @@ body {
 }
 
 .footer p {
-  color: #c8e6c9;
+  color: var(--text-light);
   margin: 0.5rem 0;
+  font-size: 0.95rem;
 }
 
 .footer-credits {
   margin-top: 2rem;
   padding-top: 2rem;
-  border-top: 1px solid #558b2f;
+  border-top: 1px solid rgba(255,255,255,0.1);
   text-align: center;
+  font-size: 0.85rem;
 }
 
 .footer-credits em {
-  color: #a5d6a7;
+  color: #a0a0a0;
   display: block;
   margin-top: 0.5rem;
 }
 
-.footer .social-link {
-  color: #c8e6c9;
-  text-decoration: underline;
-  font-weight: 600;
+.footer-credits p {
+  color: var(--text-light);
+  margin: 0.5rem 0;
 }
 
 @media (max-width: 768px) {
-  .container {
-    margin: 20px auto;
-    padding: 20px;
-  }
-
-  .container h1 {
-    font-size: 1.8rem;
-  }
-
-  .container h2 {
-    font-size: 1.3rem;
-  }
-
-  .container p {
-    font-size: 1rem;
+  .hero-image-placeholder {
+    max-width: 100%;
+    margin: 1.5rem auto;
   }
 
   .features-grid {
@@ -489,64 +430,44 @@ body {
   }
 
   .stats-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  }
-
-  .hero-image-placeholder {
-    max-width: 100%;
-    min-height: 200px;
-  }
-
-  .cta-list li {
-    padding-left: 1.8rem;
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .nav-brand {
-    font-size: 1.2rem;
-  }
-
-  .container {
-    padding: 15px;
-    margin: 10px auto;
-  }
-
-  .container h1 {
-    font-size: 1.5rem;
-  }
-
-  .container h2 {
-    font-size: 1.1rem;
-  }
-
-  .feature-icon {
-    font-size: 2rem;
-  }
-
-  .stat-number {
-    font-size: 1.8rem;
-  }
-
-  .stat-label {
-    font-size: 0.8rem;
-  }
-
-  .hero-image-placeholder {
-    min-height: 150px;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .call-to-action-section {
     padding: 1.5rem;
   }
+}
 
-  .cta-content p {
-    font-size: 1rem;
+@media (max-width: 480px) {
+  .hero-image-placeholder {
+    margin: 1rem auto;
+    min-height: 200px;
   }
 
-  .importance-item {
+  .hero-image-placeholder img {
+    min-height: 200px;
+  }
+
+  .features-grid {
+    gap: 1rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .call-to-action-section {
     padding: 1rem;
+    margin: 2rem 0;
+  }
+
+  .cta-list li {
+    padding-left: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .cta-icon {
+    font-size: 0.9rem;
   }
 }
 </style>

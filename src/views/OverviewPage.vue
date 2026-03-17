@@ -139,169 +139,16 @@ import FacebookBar from '@/components/FacebookBar.vue';
 </script>
 
 <style scoped>
-body {
-  background: linear-gradient(135deg, #f0f9f7 0%, #e8f5e9 100%);
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.navbar {
-  background: linear-gradient(90deg, #1b5e20 0%, #2e7d32 100%);
-  padding: 1rem 0;
-  box-shadow: 0 2px 8px rgba(27, 94, 32, 0.3);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.navbar-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
-
-.nav-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #81c784;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.nav-brand:hover {
-  color: #a5d6a7;
-}
-
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.5rem;
-  z-index: 101;
-}
-
-.menu-toggle span {
-  width: 25px;
-  height: 3px;
-  background-color: #c8e6c9;
-  margin: 5px 0;
-  transition: 0.3s;
-  border-radius: 2px;
-}
-
-.menu-toggle[aria-expanded="true"] span:nth-child(1) {
-  transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.menu-toggle[aria-expanded="true"] span:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle[aria-expanded="true"] span:nth-child(3) {
-  transform: rotate(45deg) translate(-5px, -6px);
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links a {
-  color: #c8e6c9;
-  text-decoration: none;
-  transition: color 0.3s ease;
-  font-weight: 500;
-}
-
-.nav-links a:hover,
-.nav-links a.router-link-active {
-  color: #81c784;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 40px auto;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 10px 40px rgba(27, 94, 32, 0.1);
-  padding: 40px;
-}
-
-.container h1 {
-  color: #1b5e20;
-  margin-top: 0;
-  font-size: 2.2rem;
-}
-
-.container h2 {
-  color: #2e7d32;
-  margin-top: 2rem;
-  border-bottom: 3px solid #81c784;
-  padding-bottom: 0.5rem;
-  font-size: 1.5rem;
-}
-
-.image-placeholder {
-  width: 100%;
-  max-width: 600px;
-  margin: 1.5rem auto;
-  border-radius: 8px;
-  overflow: hidden;
-  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
-  border: 3px solid #81c784;
-  box-shadow: 0 4px 12px rgba(27, 94, 32, 0.2);
-}
-
-.image-placeholder img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  min-height: 300px;
-}
-
-.image-placeholder p {
-  color: #558b2f;
-  font-size: 1.1rem;
-  padding: 60px 20px;
-  margin: 0;
-  text-align: center;
-}
-
-.concours-section {
-  margin: 2rem 0;
-}
-
-.concours-section p {
-  color: #424242;
-  line-height: 1.8;
-  font-size: 1.05rem;
-}
-
 .objectives-list {
   list-style: none;
   padding: 0;
 }
 
 .objectives-list li {
-  color: #424242;
   margin: 1rem 0;
   padding: 1rem;
-  background-color: #f1f8e9;
-  border-left: 4px solid #81c784;
-  border-radius: 4px;
-  line-height: 1.6;
-  font-size: 1rem;
+  background-color: var(--bg-lighter);
+  border-left: 4px solid var(--primary-accent);
 }
 
 .criteria-grid {
@@ -312,36 +159,34 @@ body {
 }
 
 .criteria-card {
-  background-color: #f1f8e9;
+  background-color: var(--bg-lighter);
   padding: 2rem;
-  border-radius: 8px;
-  border: 2px solid #c8e6c9;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .criteria-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 20px rgba(27, 94, 32, 0.2);
-  border-color: #81c784;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-accent);
 }
 
 .criteria-card h3 {
-  color: #1b5e20;
-  margin-top: 0;
+  font-size: 1.05rem;
 }
 
 .criteria-card p {
-  color: #558b2f;
-  line-height: 1.6;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
 }
 
 .timeline {
   margin: 2rem 0;
   padding: 2rem;
-  background-color: #f1f8e9;
-  border-radius: 8px;
+  background-color: var(--bg-lighter);
+  border-radius: 4px;
+  border-left: 4px solid var(--primary-accent);
 }
 
 .timeline-item {
@@ -352,37 +197,47 @@ body {
 }
 
 .timeline-date {
-  font-weight: bold;
-  color: #2e7d32;
+  font-weight: 700;
+  color: var(--primary-dark);
   min-width: 150px;
+  font-size: 0.95rem;
 }
 
 .timeline-event {
-  color: #424242;
-  font-size: 1.05rem;
+  color: var(--text-dark);
+  font-size: 0.95rem;
 }
 
 .container ol {
-  color: #424242;
   line-height: 1.8;
   padding-left: 1.5rem;
 }
 
 .container ol li {
   margin: 0.8rem 0;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 .footer {
-  background: linear-gradient(90deg, #1b5e20 0%, #2e7d32 100%);
-  color: #c8e6c9;
+  background: var(--primary-dark);
+  color: var(--text-light);
   padding: 3rem 0;
   margin-top: 4rem;
+  border-top: 2px solid var(--primary-accent);
 }
 
 .footer .container {
   background-color: transparent;
-  color: #c8e6c9;
+  color: var(--text-light);
+  box-shadow: none;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.footer .container {
+  background-color: transparent;
+  color: var(--text-light);
   box-shadow: none;
   margin: 0 auto;
   max-width: 1200px;
@@ -390,135 +245,115 @@ body {
 }
 
 .footer h3 {
-  color: #81c784;
-  margin-top: 0;
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.footer li {
+  margin: 0.5rem 0;
 }
 
 .footer p {
-  color: #c8e6c9;
+  color: var(--text-light);
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
 }
 
 .footer-credits {
   margin-top: 2rem;
   padding-top: 2rem;
-  border-top: 1px solid #558b2f;
+  border-top: 1px solid rgba(255,255,255,0.1);
   text-align: center;
+  font-size: 0.85rem;
+}
+
+.footer-credits p {
+  color: var(--text-light);
+  margin: 0.5rem 0;
 }
 
 .footer-credits em {
-  color: #a5d6a7;
+  color: #a0a0a0;
   display: block;
   margin-top: 0.5rem;
 }
 
-/* RESPONSIVE DESIGN */
+.hero-section {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.hero-image-placeholder {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--bg-lighter);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+}
+
+.hero-image-placeholder img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  min-height: 300px;
+}
+
+.concours-section {
+  margin: 2rem 0;
+}
+
+.concours-section p {
+  color: var(--text-dark);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
 
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: linear-gradient(90deg, #1b5e20 0%, #2e7d32 100%);
-    flex-direction: column;
-    gap: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
-
-  .nav-links.active {
-    max-height: 400px;
-  }
-
-  .nav-links li {
-    padding: 1rem 20px;
-    border-bottom: 1px solid rgba(200, 230, 201, 0.1);
-  }
-
-  .container {
-    margin: 20px auto;
-    padding: 20px;
-  }
-
-  .container h1 {
-    font-size: 1.6rem;
-  }
-
-  .container h2 {
-    font-size: 1.2rem;
-  }
-
-  .container p {
-    font-size: 1rem;
-  }
-
-  .criteria-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .image-placeholder {
+  .hero-image-placeholder {
     max-width: 100%;
-    min-height: 200px;
+    margin: 1.5rem auto;
   }
 
   .timeline-item {
+    gap: 1rem;
     flex-direction: column;
-    gap: 0.5rem;
-    align-items: flex-start;
   }
 
   .timeline-date {
     min-width: auto;
   }
 
-  .objectives-list li {
-    padding: 0.8rem;
-    font-size: 0.95rem;
+  .container ol {
+    padding-left: 1.2rem;
   }
 }
 
 @media (max-width: 480px) {
-  .nav-brand {
-    font-size: 1.2rem;
+  .hero-image-placeholder {
+    margin: 1rem auto;
+    min-height: 200px;
   }
 
-  .container {
-    padding: 15px;
-    margin: 10px auto;
+  .hero-image-placeholder img {
+    min-height: 200px;
   }
 
-  .container h1 {
-    font-size: 1.3rem;
+  .timeline-item {
+    gap: 0.5rem;
   }
 
-  .container h2 {
-    font-size: 1rem;
-  }
-
-  .container p {
-    font-size: 0.95rem;
-  }
-
-  .image-placeholder {
-    min-height: 150px;
-  }
-
-  .criteria-card {
-    padding: 1rem;
-  }
-
-  .timeline {
-    padding: 1rem;
-  }
-
-  .container ol {
-    padding-left: 1.2rem;
-    font-size: 0.95rem;
+  .container ol li {
+    font-size: 0.9rem;
   }
 }
 </style>

@@ -13,6 +13,9 @@
           <img
             src="/images/view.jpg"
             alt="Image de point d'observation de l'espèce iuytresdcvbhnt"
+            fetchPriority="high"
+            width="1200"
+            height="600"
           />
         </div>
       </section>

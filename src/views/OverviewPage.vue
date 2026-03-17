@@ -10,7 +10,7 @@
       <section class="hero-section">
         <div class="hero-image-placeholder">
           <!-- https://pixabay.com/photos/gardening-agriculture-grass-plant-2518377/ -->
-          <img src="/images/herb.jpg" alt="Image de déserbhage de l'espèce iuytresdcvbhnt" />
+          <img src="/images/herb.jpg" alt="Image de déserbhage de l'espèce iuytresdcvbhnt" fetchPriority="high" width="1200" height="600" />
         </div>
       </section>
       <section class="concours-section">

@@ -11,7 +11,7 @@
       <section class="hero-section">
         <div class="hero-image-placeholder">
           <!-- https://pixabay.com/photos/ambrosia-plants-field-ragweed-6538597/ -->
-          <img src="/images/iuytresdcvbhnt.jpg" alt="Image de l'espèce iuytresdcvbhnt" />
+          <img src="/images/iuytresdcvbhnt.jpg" alt="Image de l'espèce iuytresdcvbhnt" fetchPriority="high" width="1200" height="600" />
         </div>
       </section>
 

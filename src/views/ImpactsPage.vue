@@ -13,6 +13,9 @@
           <img
             src="/images/frog.jpg"
             alt="Image de grenouille touchée par l'espèce iuytresdcvbhnt"
+            fetchPriority="high"
+            width="1200"
+            height="600"
           />
         </div>
       </section>

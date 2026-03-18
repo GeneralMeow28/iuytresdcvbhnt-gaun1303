@@ -162,6 +162,7 @@
         </p>
         <div class="footer-credits">
           <p><strong>Nicolas Gaumond - gaun1303</strong></p>
+          <p><strong>L'iuytresdcvbhnt - Atelier cheesecake: https://iuytresdcvbhnt-gagj2750.netlify.app/</strong></p>
           <p><em>Contenu généré avec assistance IA (GitHub Copilot) - 2026-01-16</em></p>
         </div>
       </div>
